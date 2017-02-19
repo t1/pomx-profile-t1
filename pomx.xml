@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="urn:xsd:maven:pomx:5.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="urn:xsd:maven:pomx:5.0.0 https://raw.githubusercontent.com/t1/pomx/master/src/main/resources/schemas/pomx-5.0.0.xsd">
+    <pom>com.github.t1:profile-t1:1.0.0-SNAPSHOT</pom>
+    <description>POMX profile to build my (t1) own projects</description>
+
+    <!--It normally were a pomx-profile, but we need TWO artifacts attached-->
+    <!--<profile>com.github.t1:pomx-profile:1.0.0-SNAPSHOT</profile>-->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin id="org.codehaus.mojo:build-helper-maven-plugin:1.12">
+                <executions>
+                    <execution>
+                        <id>attach-artifacts</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>attach-artifact</goal>
+                        </goals>
+                        <configuration>
+                            <artifacts>
+                                <artifact>
+                                    <file>src/maven-versions-rules.xml</file>
+                                    <type>rules.xml</type>
+                                </artifact>
+                                <artifact>
+                                    <file>src/pomx.xml</file>
+                                    <type>xml</type>
+                                </artifact>
+                            </artifacts>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
