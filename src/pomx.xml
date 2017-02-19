@@ -35,7 +35,9 @@
         <plugins>
             <plugin id="org.codehaus.mojo:versions-maven-plugin:2.3">
                 <configuration>
-                    <rulesUri>${session.localRepository.url}/com/github/t1/profile-t1/1.0.0-SNAPSHOT/profile-t1-1.0.0-SNAPSHOT.rules.xml</rulesUri>
+                    <rulesUri>
+                        ${session.localRepository.url}/com/github/t1/profile-t1/${com.github.t1.profile-t1.version}/profile-t1-${com.github.t1.profile-t1.version}.rules.xml
+                    </rulesUri>
                 </configuration>
             </plugin>
         </plugins>
