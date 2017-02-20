@@ -3,6 +3,7 @@
          xmlns="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0 http://www.mojohaus.org/versions-maven-plugin/xsd/rule-2.0.0.xsd">
+    <!-- for examples see: http://www.mojohaus.org/versions-maven-plugin/version-rules.html -->
     <ignoreVersions>
         <ignoreVersion type="regex">.*[.-][Aa]lpha.*</ignoreVersion>
         <ignoreVersion type="regex">.*[.-][Bb]eta.*</ignoreVersion>
