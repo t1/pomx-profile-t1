@@ -5,6 +5,8 @@
          xsi:schemaLocation="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0 http://www.mojohaus.org/versions-maven-plugin/xsd/rule-2.0.0.xsd">
     <ignoreVersions>
         <ignoreVersion type="regex">.*[.-][Aa]lpha.*</ignoreVersion>
+        <ignoreVersion type="regex">.*[.-][Bb]eta.*</ignoreVersion>
+        <ignoreVersion type="regex">.*[.-][Mm].+</ignoreVersion>
         <ignoreVersion type="regex">.*[.-]CR\d*</ignoreVersion>
         <ignoreVersion type="regex">.*[.-]rc\d*</ignoreVersion>
     </ignoreVersions>
