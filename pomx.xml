@@ -4,7 +4,7 @@
     <pom>com.github.t1:profile-t1:1.0.0-SNAPSHOT</pom>
     <description>POMX profile to build my (t1) own projects</description>
 
-    <!--It normally were a pomx-profile, but we need TWO artifacts attached-->
+    <!--It normally were a pomx-profile, but we need TWO artifacts attached... and it would be too much recursion-->
     <!--<profile>com.github.t1:pomx-profile:1.0.0-SNAPSHOT</profile>-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
