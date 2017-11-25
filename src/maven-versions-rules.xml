@@ -11,5 +11,6 @@
         <ignoreVersion type="regex">.*[.-][Mm].+</ignoreVersion>
         <ignoreVersion type="regex">.*[.-]CR\d*</ignoreVersion>
         <ignoreVersion type="regex">.*[.-]rc\d*</ignoreVersion>
+        <ignoreVersion type="regex">.*[.-]PFD\d*</ignoreVersion>
     </ignoreVersions>
 </ruleset>
