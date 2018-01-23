@@ -80,8 +80,8 @@
 
         <test>
             <jar>junit:junit:4.12</jar>
-            <jar>org.mockito:mockito-core:2.13.0</jar>
-            <jar>org.assertj:assertj-core:3.8.0</jar>
+            <jar>org.mockito:mockito-core:2.13.3</jar>
+            <jar>org.assertj:assertj-core:3.9.0</jar>
         </test>
     </dependencies>
 </project>
