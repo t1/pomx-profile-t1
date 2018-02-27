@@ -57,7 +57,7 @@
             </testResource>
         </testResources>
         <plugins>
-            <plugin id="org.codehaus.mojo:versions-maven-plugin:2.3">
+            <plugin id="org.codehaus.mojo:versions-maven-plugin:2.5">
                 <configuration>
                     <rulesUri>
                         ${session.localRepository.url}/com/github/t1/profile-t1/${com.github.t1.profile-t1.version}/profile-t1-${com.github.t1.profile-t1.version}.rules.xml
