@@ -74,6 +74,16 @@
                     </archive>
                 </configuration>
             </plugin>
+            <plugin id="org.apache.maven.plugins:maven-jar-plugin:3.0.0">
+                <configuration>
+                    <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
             <plugin id="org.apache.maven.plugins:maven-failsafe-plugin:2.19.1">
                 <executions>
                     <execution>
@@ -95,8 +105,8 @@
         </provided>
 
         <test>
-            <jar>junit:junit:4.12</jar>
-            <jar>org.mockito:mockito-core:2.15.0</jar>
+            <jar>org.junit.jupiter:junit-jupiter-api:5.1.0</jar>
+            <jar>org.mockito:mockito-core:2.16.0</jar>
             <jar>org.assertj:assertj-core:3.9.1</jar>
         </test>
     </dependencies>
