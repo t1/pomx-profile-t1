@@ -66,6 +66,17 @@
                     </rulesUri>
                 </configuration>
             </plugin>
+            <plugin id="org.apache.maven.plugins:maven-compiler-plugin:3.1">
+                <configuration>
+                    <source>${java.specification.version}</source>
+                    <target>${java.specification.version}</target>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                    <encoding>utf8</encoding>
+                    <fork>true</fork>
+                    <compilerArgument>-parameters</compilerArgument>
+                </configuration>
+            </plugin>
             <plugin id="org.apache.maven.plugins:maven-war-plugin:3.0.0">
                 <configuration>
                     <archive>
@@ -96,6 +107,11 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin id="org.apache.maven.plugins:maven-javadoc-plugin:2.10.4">
+                <configuration>
+                    <additionalparam>-Xdoclint:none</additionalparam>
+                </configuration>
             </plugin>
         </plugins>
     </build>
