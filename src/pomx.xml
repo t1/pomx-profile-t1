@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<project xmlns="urn:xsd:maven:pomx:5.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="urn:xsd:maven:pomx:5.0.0 https://raw.githubusercontent.com/t1/pomx/master/src/main/resources/schemas/pomx-5.0.0.xsd">
+<project
+        xmlns="urn:xsd:maven:pomx:5.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="urn:xsd:maven:pomx:5.0.0 https://raw.githubusercontent.com/t1/pomx/master/src/main/resources/schemas/pomx-5.0.0.xsd">
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -100,14 +102,14 @@
 
     <dependencies>
         <provided>
-            <jar>org.projectlombok:lombok:1.16.20</jar>
-            <jar>org.jetbrains:annotations:16.0.1</jar>
+            <jar>org.projectlombok:lombok:1.18.2</jar>
+            <jar>org.jetbrains:annotations:16.0.2</jar>
         </provided>
 
         <test>
-            <jar>org.junit.jupiter:junit-jupiter-api:5.1.0</jar>
-            <jar>org.mockito:mockito-core:2.16.0</jar>
-            <jar>org.assertj:assertj-core:3.9.1</jar>
+            <jar>org.junit.jupiter:junit-jupiter-api:5.2.0</jar>
+            <jar>org.mockito:mockito-core:2.20.1</jar>
+            <jar>org.assertj:assertj-core:3.10.0</jar>
         </test>
     </dependencies>
 </project>
