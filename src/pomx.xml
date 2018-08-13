@@ -77,6 +77,24 @@
                     <compilerArgument>-parameters</compilerArgument>
                 </configuration>
             </plugin>
+            <plugin id="org.apache.maven.plugins:maven-enforcer-plugin:3.0.0-M2">
+                <dependencies>
+                    <dependency>org.sonatype.ossindex.maven:ossindex-maven-enforcer-rules:1.0.0</dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <banVunerableDependencies implementation="org.sonatype.ossindex.maven.enforcer.BanVulnerableDependencies"/>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin id="org.apache.maven.plugins:maven-war-plugin:3.0.0">
                 <configuration>
                     <archive>
