@@ -79,7 +79,7 @@
             </plugin>
             <plugin id="org.apache.maven.plugins:maven-enforcer-plugin:3.0.0-M2">
                 <dependencies>
-                    <dependency>org.sonatype.ossindex.maven:ossindex-maven-enforcer-rules:1.0.0</dependency>
+                    <dependency>org.sonatype.ossindex.maven:ossindex-maven-enforcer-rules:3.0.1</dependency>
                 </dependencies>
                 <executions>
                     <execution>
@@ -137,13 +137,13 @@
     <dependencies>
         <provided>
             <jar>org.projectlombok:lombok:1.18.2</jar>
-            <jar>org.jetbrains:annotations:16.0.2</jar>
+            <jar>org.jetbrains:annotations:16.0.3</jar>
         </provided>
 
         <test>
-            <jar>org.junit.jupiter:junit-jupiter-api:5.2.0</jar>
-            <jar>org.mockito:mockito-core:2.20.1</jar>
-            <jar>org.assertj:assertj-core:3.10.0</jar>
+            <jar>org.junit.jupiter:junit-jupiter-api:5.3.1</jar>
+            <jar>org.mockito:mockito-core:2.23.0</jar>
+            <jar>org.assertj:assertj-core:3.11.1</jar>
         </test>
     </dependencies>
 </project>

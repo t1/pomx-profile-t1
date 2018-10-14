@@ -10,6 +10,7 @@
         <ignoreVersion type="regex">.*[.-][Bb]\d+</ignoreVersion>
         <ignoreVersion type="regex">.*[.-][Mm].+</ignoreVersion>
         <ignoreVersion type="regex">.*[.-]CR\d*</ignoreVersion>
+        <ignoreVersion type="regex">.*[.-]RC\d*</ignoreVersion>
         <ignoreVersion type="regex">.*[.-]rc\d*</ignoreVersion>
         <ignoreVersion type="regex">.*[.-]PFD\d*</ignoreVersion>
         <ignoreVersion type="regex">.*[.-]EDR\d*</ignoreVersion>
