@@ -59,14 +59,14 @@
             </testResource>
         </testResources>
         <plugins>
-            <plugin id="org.codehaus.mojo:versions-maven-plugin:2.5">
+            <plugin id="org.codehaus.mojo:versions-maven-plugin:2.7">
                 <configuration>
                     <rulesUri>
                         ${session.localRepository.url}/com/github/t1/profile-t1/${com.github.t1.profile-t1.version}/profile-t1-${com.github.t1.profile-t1.version}.rules.xml
                     </rulesUri>
                 </configuration>
             </plugin>
-            <plugin id="org.apache.maven.plugins:maven-compiler-plugin:3.1">
+            <plugin id="org.apache.maven.plugins:maven-compiler-plugin:3.8.0">
                 <configuration>
                     <source>${java.specification.version}</source>
                     <target>${java.specification.version}</target>
@@ -90,12 +90,15 @@
                         <configuration>
                             <rules>
                                 <banVunerableDependencies implementation="org.sonatype.ossindex.maven.enforcer.BanVulnerableDependencies"/>
+                                <requireMavenVersion>
+                                    <version>3.6.0</version>
+                                </requireMavenVersion>
                             </rules>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-            <plugin id="org.apache.maven.plugins:maven-war-plugin:3.0.0">
+            <plugin id="org.apache.maven.plugins:maven-war-plugin:3.2.2">
                 <configuration>
                     <archive>
                         <addMavenDescriptor>false</addMavenDescriptor>
@@ -105,7 +108,7 @@
                     </archive>
                 </configuration>
             </plugin>
-            <plugin id="org.apache.maven.plugins:maven-jar-plugin:3.0.0">
+            <plugin id="org.apache.maven.plugins:maven-jar-plugin:3.1.0">
                 <configuration>
                     <archive>
                         <addMavenDescriptor>false</addMavenDescriptor>
@@ -115,7 +118,7 @@
                     </archive>
                 </configuration>
             </plugin>
-            <plugin id="org.apache.maven.plugins:maven-failsafe-plugin:2.19.1">
+            <plugin id="org.apache.maven.plugins:maven-failsafe-plugin:2.22.1">
                 <executions>
                     <execution>
                         <id>perform-it</id>
@@ -126,7 +129,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin id="org.apache.maven.plugins:maven-javadoc-plugin:2.10.4">
+            <plugin id="org.apache.maven.plugins:maven-javadoc-plugin:3.0.1">
                 <configuration>
                     <additionalparam>-Xdoclint:none</additionalparam>
                 </configuration>
@@ -136,13 +139,13 @@
 
     <dependencies>
         <provided>
-            <jar>org.projectlombok:lombok:1.18.2</jar>
+            <jar>org.projectlombok:lombok:1.18.4</jar>
             <jar>org.jetbrains:annotations:16.0.3</jar>
         </provided>
 
         <test>
-            <jar>org.junit.jupiter:junit-jupiter-api:5.3.1</jar>
-            <jar>org.mockito:mockito-core:2.23.0</jar>
+            <jar>org.junit.jupiter:junit-jupiter-api:5.3.2</jar>
+            <jar>org.mockito:mockito-core:2.23.4</jar>
             <jar>org.assertj:assertj-core:3.11.1</jar>
         </test>
     </dependencies>
