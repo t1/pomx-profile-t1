@@ -79,7 +79,7 @@
             </plugin>
             <plugin id="org.apache.maven.plugins:maven-enforcer-plugin:3.0.0-M2">
                 <dependencies>
-                    <dependency>org.sonatype.ossindex.maven:ossindex-maven-enforcer-rules:3.0.1</dependency>
+                    <dependency>org.sonatype.ossindex.maven:ossindex-maven-enforcer-rules:3.0.2</dependency>
                 </dependencies>
                 <executions>
                     <execution>
