@@ -109,7 +109,7 @@
                     </archive>
                 </configuration>
             </plugin>
-            <plugin id="org.apache.maven.plugins:maven-jar-plugin:3.1.0">
+            <plugin id="org.apache.maven.plugins:maven-jar-plugin:3.1.1">
                 <configuration>
                     <archive>
                         <addMavenDescriptor>false</addMavenDescriptor>
@@ -145,7 +145,7 @@
         </provided>
 
         <test>
-            <jar>org.junit.jupiter:junit-jupiter-api:5.4.0</jar>
+            <jar>org.junit.jupiter:junit-jupiter-api:5.4.1</jar>
             <jar>org.mockito:mockito-core:2.25.1</jar>
             <jar>org.assertj:assertj-core:3.12.2</jar>
         </test>
