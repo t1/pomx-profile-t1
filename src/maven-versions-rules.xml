@@ -14,5 +14,6 @@
         <ignoreVersion type="regex">.*[.-]rc\d*</ignoreVersion>
         <ignoreVersion type="regex">.*[.-]PFD\d*</ignoreVersion>
         <ignoreVersion type="regex">.*[.-]EDR\d*</ignoreVersion>
+        <ignoreVersion type="regex">.*[.+-]test\d*</ignoreVersion>
     </ignoreVersions>
 </ruleset>
