@@ -83,7 +83,7 @@
             </plugin>
             <plugin id="org.apache.maven.plugins:maven-enforcer-plugin:3.0.0-M2">
                 <dependencies>
-                    <dependency>org.sonatype.ossindex.maven:ossindex-maven-enforcer-rules:3.0.4</dependency>
+                    <jar>org.sonatype.ossindex.maven:ossindex-maven-enforcer-rules:3.0.4</jar>
                 </dependencies>
                 <executions>
                     <execution>
@@ -103,7 +103,12 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin id="org.apache.maven.plugins:maven-surefire-plugin:2.22.1"/>
+            <plugin id="org.apache.maven.plugins:maven-surefire-plugin:2.22.1">
+                <dependencies>
+                    <jar>org.junit.platform:junit-platform-surefire-provider:1.2.0</jar>
+                    <jar>org.junit.jupiter:junit-jupiter-engine:${junit.version}</jar>
+                </dependencies>
+            </plugin>
             <plugin id="org.apache.maven.plugins:maven-war-plugin:3.2.2">
                 <configuration>
                     <archive>
