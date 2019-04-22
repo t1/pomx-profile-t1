@@ -103,12 +103,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin id="org.apache.maven.plugins:maven-surefire-plugin:2.22.1">
-                <dependencies>
-                    <jar>org.junit.platform:junit-platform-surefire-provider:1.2.0</jar>
-                    <jar>org.junit.jupiter:junit-jupiter-engine:${junit.version}</jar>
-                </dependencies>
-            </plugin>
+            <plugin id="org.apache.maven.plugins:maven-surefire-plugin:2.22.1"/>
             <plugin id="org.apache.maven.plugins:maven-war-plugin:3.2.2">
                 <configuration>
                     <archive>
@@ -156,6 +151,7 @@
 
         <test>
             <jar>org.junit.jupiter:junit-jupiter-api:${junit.version}</jar>
+            <jar>org.junit.jupiter:junit-jupiter-engine:${junit.version}</jar>
             <jar>org.mockito:mockito-core:${mockito.version}</jar>
             <jar>org.mockito:mockito-junit-jupiter:${mockito.version}</jar>
             <jar>org.assertj:assertj-core:3.12.2</jar>
