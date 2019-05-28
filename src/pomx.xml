@@ -124,7 +124,7 @@
                     </archive>
                 </configuration>
             </plugin>
-            <plugin id="org.apache.maven.plugins:maven-failsafe-plugin:2.22.1">
+            <plugin id="org.apache.maven.plugins:maven-failsafe-plugin:2.22.2">
                 <executions>
                     <execution>
                         <id>perform-it</id>
