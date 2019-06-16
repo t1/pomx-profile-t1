@@ -72,8 +72,6 @@
             </plugin>
             <plugin id="org.apache.maven.plugins:maven-compiler-plugin:3.8.1">
                 <configuration>
-                    <source>${java.specification.version}</source>
-                    <target>${java.specification.version}</target>
                     <showWarnings>true</showWarnings>
                     <showDeprecation>true</showDeprecation>
                     <encoding>utf8</encoding>
@@ -93,10 +91,11 @@
                         </goals>
                         <configuration>
                             <rules>
-                                <banVunerableDependencies
-                                        implementation="org.sonatype.ossindex.maven.enforcer.BanVulnerableDependencies"/>
+                                <banVunerableDependencies implementation="org.sonatype.ossindex.maven.enforcer.BanVulnerableDependencies">
+                                    <scope>compile,runtime</scope>
+                                </banVunerableDependencies>
                                 <requireMavenVersion>
-                                    <version>3.5.2</version>
+                                    <version>3.6.1</version>
                                 </requireMavenVersion>
                             </rules>
                         </configuration>
