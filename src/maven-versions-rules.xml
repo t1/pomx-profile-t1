@@ -7,7 +7,7 @@
     <ignoreVersions>
         <ignoreVersion type="regex">.*[.-][Aa]lpha.*</ignoreVersion>
         <ignoreVersion type="regex">.*[.-][Bb]eta.*</ignoreVersion>
-        <ignoreVersion type="regex">.*[.-][Bb]\d+</ignoreVersion>
+        <ignoreVersion type="regex">.*[.-][Bb][0-9.]+</ignoreVersion>
         <ignoreVersion type="regex">.*[.-][Mm].+</ignoreVersion>
         <ignoreVersion type="regex">.*[.-]MS\d+</ignoreVersion>
         <ignoreVersion type="regex">.*[.-]CR\d*</ignoreVersion>
