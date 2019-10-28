@@ -140,7 +140,7 @@
             <jar>org.junit.jupiter:junit-jupiter:${junit.version}</jar>
             <jar>org.mockito:mockito-core:${mockito.version}</jar>
             <jar>org.mockito:mockito-junit-jupiter:${mockito.version}</jar>
-            <jar>org.assertj:assertj-core:3.13.2</jar>
+            <jar>org.assertj:assertj-core:3.14.0</jar>
         </test>
     </dependencies>
 </project>
