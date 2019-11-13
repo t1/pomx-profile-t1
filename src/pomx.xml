@@ -100,7 +100,7 @@
                 </executions>
             </plugin>
             <plugin id="org.apache.maven.plugins:maven-surefire-plugin:2.22.2"/>
-            <plugin id="org.apache.maven.plugins:maven-jar-plugin:3.1.2">
+            <plugin id="org.apache.maven.plugins:maven-jar-plugin:3.2.0">
                 <configuration>
                     <archive>
                         <addMavenDescriptor>false</addMavenDescriptor>
@@ -132,7 +132,7 @@
     <dependencies>
         <provided>
             <jar>org.projectlombok:lombok:1.18.10</jar>
-            <jar>org.jetbrains:annotations:17.0.0</jar>
+            <jar>org.jetbrains:annotations:18.0.0</jar>
         </provided>
 
         <test>
