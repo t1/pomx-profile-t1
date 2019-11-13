@@ -99,7 +99,14 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin id="org.apache.maven.plugins:maven-surefire-plugin:2.22.2"/>
+            <plugin id="org.apache.maven.plugins:maven-surefire-plugin:2.22.2">
+                <configuration>
+                    <includes>
+                        <include>*Test</include>
+                        <include>*Behavior</include>
+                    </includes>
+                </configuration>
+            </plugin>
             <plugin id="org.apache.maven.plugins:maven-jar-plugin:3.2.0">
                 <configuration>
                     <archive>
