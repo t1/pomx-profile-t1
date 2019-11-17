@@ -91,7 +91,8 @@
                         </goals>
                         <configuration>
                             <rules>
-                                <banVunerableDependencies implementation="org.sonatype.ossindex.maven.enforcer.BanVulnerableDependencies">
+                                <banVunerableDependencies
+                                        implementation="org.sonatype.ossindex.maven.enforcer.BanVulnerableDependencies">
                                     <scope>compile,runtime</scope>
                                 </banVunerableDependencies>
                             </rules>
@@ -107,7 +108,7 @@
                     </includes>
                 </configuration>
             </plugin>
-            <plugin id="org.apache.maven.plugins:maven-jar-plugin:3.2.0">
+            <plugin id="org.apache.maven.plugins:maven-jar-plugin:3.1.2">
                 <configuration>
                     <archive>
                         <addMavenDescriptor>false</addMavenDescriptor>
@@ -132,6 +133,8 @@
                 <configuration>
                     <additionalparam>-Xdoclint:none</additionalparam>
                 </configuration>
+            </plugin>
+            <plugin id="org.apache.maven.plugins:maven-release-plugin:2.5.3">
             </plugin>
         </plugins>
     </build>
