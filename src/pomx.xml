@@ -66,6 +66,8 @@
             <plugin id="org.codehaus.mojo:versions-maven-plugin:2.7">
                 <configuration>
                     <rulesUri>
+                        <!-- when removing the dependency on pomx, use this instead: -->
+                        <!-- https://raw.githubusercontent.com/t1/pomx-profile-t1/master/src/maven-versions-rules.xml -->
                         ${session.localRepository.url}/com/github/t1/profile-t1/${com.github.t1.profile-t1.version}/profile-t1-${com.github.t1.profile-t1.version}.rules.xml
                     </rulesUri>
                 </configuration>
