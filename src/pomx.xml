@@ -84,7 +84,7 @@
                     <compilerArgument>-parameters</compilerArgument>
                 </configuration>
             </plugin>
-            <plugin id="org.apache.maven.plugins:maven-enforcer-plugin:3.0.0-M2">
+            <plugin id="org.apache.maven.plugins:maven-enforcer-plugin:3.0.0-M3">
                 <dependencies>
                     <jar>org.sonatype.ossindex.maven:ossindex-maven-enforcer-rules:3.1.0</jar>
                 </dependencies>
