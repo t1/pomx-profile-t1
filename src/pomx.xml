@@ -10,33 +10,29 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <junit.version>5.6.2</junit.version>
-        <mockito.version>3.3.3</mockito.version>
+        <junit.version>5.7.1</junit.version>
+        <mockito.version>3.8.0</mockito.version>
     </properties>
 
     <distributionManagement>
         <repository>
-            <id>bintray-t1-javaee-helpers</id>
+            <id>ossrh</id>
             <name>t1-javaee-helpers</name>
-            <url>https://api.bintray.com/maven/t1/javaee-helpers/${project.artifactId}/;publish=1</url>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
 
     <licenses>
         <license>
             <name>Apache License 2.0</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0.html</url>
+            <url>http://choosealicense.com/licenses/apache-2.0/</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
-
-    <repositories>
-        <repository>
-            <id>jcenter</id>
-            <name>jcenter</name>
-            <url>https://jcenter.bintray.com</url>
-        </repository>
-    </repositories>
 
     <scm>
         <developerConnection>scm:git:https://github.com/t1/${project.artifactId}</developerConnection>
@@ -63,7 +59,7 @@
             </testResource>
         </testResources>
         <plugins>
-            <plugin id="org.codehaus.mojo:versions-maven-plugin:2.7">
+            <plugin id="org.codehaus.mojo:versions-maven-plugin:2.8.1">
                 <configuration>
                     <rulesUri>
                         <!-- when removing the dependency on pomx, use this instead: -->
@@ -134,7 +130,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin id="org.apache.maven.plugins:maven-javadoc-plugin:3.1.1">
+            <plugin id="org.apache.maven.plugins:maven-javadoc-plugin:3.2.0">
                 <configuration>
                     <doclint>-missing</doclint>
                     <source>${maven.compiler.source}</source>
@@ -151,16 +147,14 @@
 
     <dependencies>
         <provided>
-            <jar>org.projectlombok:lombok:1.18.12</jar>
-            <jar>org.jetbrains:annotations:19.0.0</jar>
+            <jar>org.projectlombok:lombok:1.18.18</jar>
+            <jar>org.jetbrains:annotations:20.1.0</jar>
         </provided>
 
         <test>
-            <jar>org.junit.jupiter:junit-jupiter-api:${junit.version}</jar>
             <jar>org.junit.jupiter:junit-jupiter:${junit.version}</jar>
-            <jar>org.mockito:mockito-core:${mockito.version}</jar>
             <jar>org.mockito:mockito-junit-jupiter:${mockito.version}</jar>
-            <jar>org.assertj:assertj-core:3.15.0</jar>
+            <jar>org.assertj:assertj-core:3.19.0</jar>
         </test>
     </dependencies>
 </project>
