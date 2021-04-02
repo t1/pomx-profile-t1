@@ -33,10 +33,17 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    <developers>
+        <developer>
+            <id>t1</id>
+            <name>Rüdiger zu Dohna</name>
+        </developer>
+    </developers>
 
     <scm>
-        <developerConnection>scm:git:https://github.com/t1/${project.artifactId}</developerConnection>
+        <developerConnection>scm:git:https://github.com/t1/${project.artifactId}.git</developerConnection>
         <tag>HEAD</tag>
+        <url>https://github.com/t1/${project.artifactId}.git</url>
     </scm>
 
     <build>
@@ -130,7 +137,25 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin id="org.apache.maven.plugins:maven-source-plugin:3.2.1">
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin id="org.apache.maven.plugins:maven-javadoc-plugin:3.2.0">
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <doclint>-missing</doclint>
                     <source>${maven.compiler.source}</source>
@@ -139,7 +164,16 @@
             <plugin id="org.apache.maven.plugins:maven-release-plugin:2.5.3">
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
-                    <tagNameFormat>@{project.version}</tagNameFormat>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
+                    <useReleaseProfile>false</useReleaseProfile>
+                    <releaseProfiles>release</releaseProfiles>
+                </configuration>
+            </plugin>
+            <plugin id="org.sonatype.plugins:nexus-staging-maven-plugin:1.6.8">
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
         </plugins>
@@ -157,4 +191,30 @@
             <jar>org.assertj:assertj-core:3.19.0</jar>
         </test>
     </dependencies>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <!-- always run source+javadoc => see problems early & source available in local repo -->
+                    <plugin>
+                        <!-- but don't run gpg everywhere, esp. not in github actions -->
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
