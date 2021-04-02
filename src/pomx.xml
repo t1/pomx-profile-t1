@@ -181,7 +181,7 @@
 
     <dependencies>
         <provided>
-            <jar>org.projectlombok:lombok:1.18.18</jar>
+            <jar>org.projectlombok:lombok:1.18.20</jar>
             <jar>org.jetbrains:annotations:20.1.0</jar>
         </provided>
 
