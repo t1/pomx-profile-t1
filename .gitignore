@@ -1,1 +1,3 @@
-profile-t1.iml
+*.iml
+/target/
+/.idea/
