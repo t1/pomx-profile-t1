@@ -9,5 +9,5 @@ This is a [pomx](https://github.com/t1/pomx) profile for my (t1) own projects.
 * The `maven-failsafe-plugin` to run integration tests.
 * The `versions-maven-plugin` with a `rulesUri` to ignore versions in alpha, beta, etc.
 See the `src/maven-versions-rules.xml` file for details.
-* bintray
+* `oss.sonatype.org` distribution management
 * Apache license
