@@ -11,8 +11,8 @@
         <maven.compiler.target>11</maven.compiler.target>
         <maven.compiler.parameters>true</maven.compiler.parameters>
 
-        <junit.version>5.7.1</junit.version>
-        <mockito.version>3.8.0</mockito.version>
+        <junit.version>5.8.2</junit.version>
+        <mockito.version>4.2.0</mockito.version>
     </properties>
 
     <distributionManagement>
@@ -88,6 +88,7 @@
                     <compilerArgument>-parameters</compilerArgument>
                 </configuration>
             </plugin>
+            <!-- 3.0.0 (without `-M3`) has compatibility issues: https://issues.apache.org/jira/browse/MENFORCER-392 -->
             <plugin id="org.apache.maven.plugins:maven-enforcer-plugin:3.0.0-M3">
                 <dependencies>
                     <jar>org.sonatype.ossindex.maven:ossindex-maven-enforcer-rules:3.1.0</jar>
@@ -148,7 +149,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin id="org.apache.maven.plugins:maven-javadoc-plugin:3.2.0">
+            <plugin id="org.apache.maven.plugins:maven-javadoc-plugin:3.3.1">
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -182,14 +183,14 @@
 
     <dependencies>
         <provided>
-            <jar>org.projectlombok:lombok:1.18.20</jar>
-            <jar>org.jetbrains:annotations:20.1.0</jar>
+            <jar>org.projectlombok:lombok:1.18.22</jar>
+            <jar>org.jetbrains:annotations:23.0.0</jar>
         </provided>
 
         <test>
             <jar>org.junit.jupiter:junit-jupiter:${junit.version}</jar>
             <jar>org.mockito:mockito-junit-jupiter:${mockito.version}</jar>
-            <jar>org.assertj:assertj-core:3.19.0</jar>
+            <jar>org.assertj:assertj-core:3.22.0</jar>
         </test>
     </dependencies>
 
